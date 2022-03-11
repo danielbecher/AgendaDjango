@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Agenda</title>
-</head>
-<body>
-    <h1>Login</h1>
-    <div align="center">
-        <form action="submit" method="POST">{% csrf_token %}
-            <label>Usuário:</label>
-            <input type="text" name="username"><br><br>
-            <label>Senha:</label>
-            <input type="password" name="password"><br><br>
-            <button type="submit">Entrar</button>
+{% load static %}
+{% include "model-header-login.html" %}
+
+    <h1 class="login__titulo">Login</h1>
+    <div class="login__div">
+        <form class="login__form" action="submit" method="POST">{% csrf_token %}
+            <label class="login__label">Usuário:</label>
+            <input class="login__input" type="text" name="username"><br><br>
+            <label class="login__label" >Senha:</label>
+            <input class="login__input" type="password" name="password"><br><br>
+            <center><button class="login__button" type="submit">Entrar</button></center>
         </form>
     </div>
     {% for message in messages %}
-        <strong>Erro:</strong> {{ message }}
+        <p class="login__erro">Erro: {{ message }}</p>
     {% endfor %}
-</body>
-</html>

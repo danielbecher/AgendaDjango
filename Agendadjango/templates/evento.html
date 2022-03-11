@@ -2,18 +2,19 @@
 
 {% block content %}
 
-<h2>Evento</h2>
-
-<form action="submit" method="POST">{% csrf_token %}
-    <label>Título:</label><br>
-    <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
-    <input type="text" name="titulo" value="{{ evento.titulo }}"><br>
-    <label>Data do evento</label><br>
-    <input type="datetime-local" name="data_evento"  value="{{ evento.get_data_input_evento }}"><br><br>
-    <label>Descrição</label><br>
-    <textarea rows="5" columns="24" name="descricao" >{{ evento.descricao }}</textarea><br><br><br>
-    <button type="submit">Salvar</button><br><br>
-    <a href="/"><button type="button">Cancelar</button></a><br><br>
-</form>
+<section class="evento__sect">
+    <h2 class="evento__titulo">Evento</h2>
+    <form action="submit" method="POST">{% csrf_token %}
+        <label class="evento__label">Título:</label>
+        <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
+        <input class="evento__input" type="text" name="titulo" value="{{ evento.titulo }}">
+        <label class="evento__label">Data do evento</label>
+        <input class="evento__input" type="datetime-local" name="data_evento"  value="{{ evento.get_data_input_evento }}">
+        <label class="evento__label">Descrição</label>
+        <textarea class="evento__input" rows="5" columns="24" name="descricao" >{{ evento.descricao }}</textarea>
+        <button class="evento__button" type="submit">Salvar</button>
+        <a href="/"><button class="evento__button" type="button">Cancelar</button></a>
+    </form>
+</section>
 
 {% endblock %}

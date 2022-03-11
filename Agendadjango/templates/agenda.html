@@ -1,12 +1,14 @@
     {% extends "model-page.html" %}
 
     {% block content %}
-    <h2>Agendamentos</h2>
-    <a href="/agenda/evento/">Adicionar evento</a>
-        <ul style="font-size: 18px;">
-            {% for evento in eventos %}
-            <li>{% if evento.get_evento_atrasado %}
-                            <div style="color: red">{% endif %}{{ evento.titulo }} - dia {{ evento.get_data_evento }} às {{ evento.get_hora_evento }} <a href="evento/?id={{ evento.id}}">Editar</a> | <a href="evento/delete/{{ evento.id }}/">Deletar</a></div></li>
-            {% endfor %}
-        </ul>
+    <section class="agenda__sect">
+        <h2 class="agenda__titulo">Agendamentos</h2>
+            <ul class="agenda__lista" style="font-size: 18px;">
+                {% for evento in eventos %}
+                <li class="agenda__lista--item">{% if evento.get_evento_atrasado %}
+                                <div style="color: red">{% endif %}{{ evento.titulo }} - dia {{ evento.get_data_evento }} às {{ evento.get_hora_evento }} <a class="agenda__link" href="evento/?id={{ evento.id}}">Editar</a> | <a class="agenda__link" href="evento/delete/{{ evento.id }}/">Deletar</a></div></li>
+                {% endfor %}
+            </ul>
+        <a class="agenda__link--add" href="/agenda/evento/">Adicionar evento</a>
+    </section>
     {% endblock %}

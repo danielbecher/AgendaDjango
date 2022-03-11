@@ -1,0 +1,160 @@
+body {
+    font-family: Montserrat;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cbecf2;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+}
+
+.header__titulo {
+    display: flex;
+    font-size: 38px;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__lista {
+    display: flex;
+}
+
+.header__lista--item {
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.login__titulo {
+    display: flex;
+    font-size: 40px;
+    justify-content: space-around;
+    font-weight: bold;
+    margin: 10px auto 50px auto;
+}
+
+.login__div {
+    width: 100%;
+    display: flex;
+    flex-direction: columns;
+    justify-content: space-around;
+}
+
+.login__label {
+    font-weight: bold;
+}
+
+.login__input {
+    width: 230px;
+    display: flex;
+    margin: 10px 0 10px 0;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 0.5rem;
+    font-size: 16px;
+    background-color: #cbecf2;
+}
+
+.login__button {
+    background-color: #008CBA;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login__erro {
+    flex: display;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #d93327;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.agenda__sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.agenda__link {
+    text-decoration: none;
+    color: #008CBA;
+}
+
+.agenda__link--add {
+    font-size: 20px;
+    text-decoration: none;
+    color: #008CBA;
+}
+
+.agenda__lista--item {
+    list-style-type: none;
+}
+
+.evento__sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.evento__label {
+    font-weight: bold;
+}
+
+.evento__input {
+    width: 230px;
+    display: flex;
+    margin: 10px 0 10px 0;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 0.5rem;
+    font-size: 16px;
+    background-color: #cbecf2;
+
+}
+
+.evento__button {
+    background-color: #008CBA;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 10px;
+}
+
+.footer {
+    background-color: #cbecf2;
+    margin-top: 70px;
+    padding: 15px 15px;
+}
+
+.footer__titulo {
+    font-size: 14px;
+}
+.footer__subtitulo {
+    font-size: 12px;
+}
+
+.footer__titulo, .footer__subtitulo {
+    text-align: center;
+}
