@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from datetime import datetime, timedelta
 class Evento(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.TextField(blank=True, null=True)
@@ -23,3 +23,9 @@ class Evento(models.Model):
     # Função para retornar a data no formato correto na edição dos eventos
     def get_data_input_evento(self):
         return self.data_evento.strftime('%Y-%m-%dT%H:%M')
+
+    def get_evento_atrasado(self):
+        if self.data_evento < datetime.now():
+            return True
+        else:
+            return False
