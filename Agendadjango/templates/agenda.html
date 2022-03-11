@@ -1,4 +1,3 @@
-
     {% extends "model-page.html" %}
 
     {% block content %}
@@ -6,7 +5,7 @@
     <a href="/agenda/evento/">Adicionar evento</a>
         <ul style="font-size: 18px;">
             {% for evento in eventos %}
-            <li>{{ evento.titulo }} - dia {{ evento.get_data_evento }} às {{ evento.get_hora_evento }}</li>
+            <li>{{ evento.titulo }} - dia {{ evento.get_data_evento }} às {{ evento.get_hora_evento }} <a href="evento/?id={{ evento.id}}">Editar</a> | <a href="evento/delete/{{ evento.id }}/">Deletar</a></li>
             {% endfor %}
         </ul>
     {% endblock %}
